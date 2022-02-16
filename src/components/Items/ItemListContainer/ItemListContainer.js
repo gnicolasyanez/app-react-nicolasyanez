@@ -27,6 +27,11 @@ function ItemListContainer() {
 
   }, [idCategoria]);
 
+  console.log(idCategoria)
+    console.log(productos)
+
+    
+
   return (
     <div>
       {cargando ? (

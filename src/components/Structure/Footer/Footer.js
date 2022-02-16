@@ -4,7 +4,7 @@ import { FaInstagram, FaTwitter, FaFacebook } from "react-icons/fa";
 
 function Footer() {
     return (
-        <section className='footerBuceo'>
+        <section className='footerNeuma'>
             <div className="socialMedia">
             <i>< FaInstagram/></i>
             <i>< FaFacebook/></i>

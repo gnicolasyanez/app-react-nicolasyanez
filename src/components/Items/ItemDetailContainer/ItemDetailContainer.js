@@ -9,18 +9,19 @@ import { doc, getDoc, getFirestore } from "firebase/firestore";
 function ItemDetailContainer() {
     const [cargandoProdIndividual, setCargandoProdIndividual] = useState(true)
     const [prodIndividual, setProdIndividual] = useState({});
-
+    
   const {idProducto} = useParams()
-
+  
 useEffect(() => {
-      const dbProductos = getFirestore()
-      const consultaProducto = doc(dbProductos, "Productos", idProducto)
+      const db = getFirestore()
+      const consultaProducto = doc(db, "productos", idProducto)
       getDoc(consultaProducto)
       .then((resp) => setProdIndividual({id: resp.id, ...resp.data()}))
       .catch(err => err)
       .finally(()=> setCargandoProdIndividual(false));
  },[idProducto])
 
+ console.log(idProducto)
   return (
     <div>
             {cargandoProdIndividual ? (
