@@ -1,0 +1,26 @@
+.footerBuceo{
+    width: 100%;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    background: #15161a;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+    color: #fff;
+    padding: 0px; }
+  
+.socialMedia {
+    margin: 0px auto; }
+
+.socialMedia i {
+    padding: 10px;
+    font-size: 25px;
+    color: white; 
+}
+
+.socialMedia i:hover {
+    color: #a71b4a;
+}
+      

@@ -1,0 +1,37 @@
+.logo{
+    width:150px;
+    height:150px;
+    margin-left: 50px;
+}
+
+.cartLogo{
+  font-size: 50px;
+}
+.navFont{
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    color: blanchedalmond;
+}
+
+.navBarColor {
+  background-color: #0e7ba7;
+  position: sticky;
+  top: 0; }
+
+.dropdown-menu {
+  background-color: #0e7ba7;
+  color: white; }
+
+.dropdown-item {
+  color: white; }
+
+
+  .cartNumber {
+    background: linear-gradient(to bottom left, #3515e9 40%, #230575 100%);
+    padding: 0;
+    text-align: center;
+    color: blanchedalmond;
+    border-radius: 50%;
+    width: 25px;
+    height: 25px;
+    transform: translate(-20px, 5px);
+  }
