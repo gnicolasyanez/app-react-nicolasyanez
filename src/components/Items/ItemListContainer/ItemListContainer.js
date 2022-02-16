@@ -5,6 +5,9 @@ import CargandoSpinner from "../../Structure/Spinners/Spinner";
 import "./ItemListContainer.css";
 import {useParams} from 'react-router-dom'
 import { collection, getDocs, query, getFirestore, where } from "firebase/firestore";
+import {app} from "../../../firebase/firebase"
+
+
 
 function ItemListContainer() {
   const [cargando, setCargando] = useState(true);
@@ -13,7 +16,7 @@ function ItemListContainer() {
 
   useEffect(() => {
 
-    const db = getFirestore()
+    const db = getFirestore(app)
 
     const consultaProductos = idCategoria? 
                                     query(collection(db, "productos"), where('categoria', '==', idCategoria)) 
@@ -22,13 +25,15 @@ function ItemListContainer() {
 
     getDocs(consultaProductos)
     .then(resp => setProductos (resp.docs.map(prod => ({id: prod.id, ...prod.data()}))))
+  
     .catch(err => err)
     .finally(() => setCargando(false));
 
   }, [idCategoria]);
 
-  console.log(idCategoria)
-    console.log(productos)
+
+
+ 
 
     
 

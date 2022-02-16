@@ -23,12 +23,12 @@ function ProcessOrder() {
       ordenDeCompra.total = sumaCart
       ordenDeCompra.items = cartLista.map(itemCarrito => {
               const itemID = itemCarrito.id;
-              const itemTitle = itemCarrito.desc;
+              const itemName = itemCarrito.desc;
               const itemPrecio = itemCarrito.precio;
               const itemQty = itemCarrito.qty;
-              const itemImg = itemCarrito.imagen;
+              const itemImageUrl = itemCarrito.imageUrl;
               const itemTotal = itemCarrito.precio * itemCarrito.qty;
-          return {itemID,itemTitle,itemPrecio,itemQty,itemTotal,itemImg}
+          return {itemID,itemName,itemPrecio,itemQty,itemTotal,itemImageUrl}
           })
 
           const database = getFirestore()

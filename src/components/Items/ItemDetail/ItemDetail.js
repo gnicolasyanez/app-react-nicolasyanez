@@ -5,7 +5,7 @@ import { useNavigate } from "react-router-dom";
 import { useCartContext } from "../../../context/cartContext";
 
 function ItemDetail({ prodIndividual }) {
-  const { imagen, titulo, desc, precio, inicial, stock, minimo } = prodIndividual;
+  const { imageUrl, name, descripcion, precio, inicial, stock, minimo } = prodIndividual;
   
   const navigate = useNavigate();
   
@@ -20,11 +20,12 @@ function ItemDetail({ prodIndividual }) {
   return (
     <div className="containerItemDetail">
       <div className="boxItemDetail">
-        <img className="prodImgItemDetail" src={imagen} alt={titulo} />
+        <img className="prodImgItemDetail" src={imageUrl} alt={name} />
         <div className="prodInfoItemDetail">
-            <h1 className="prodTituloItemDetail">{titulo}</h1>
+            <h1 className="prodTituloItemDetail">{name}</h1>
             <p className="prodPrecioItemDetail">{precio}</p>
-            <p className="prodDescItemDetail">{desc}</p>
+            <p className="prodDescItemDetail">{descripcion}</p>
+            <p className="prodStockItemDetail">stock : {stock}</p>
             <br />
             <br />
             <ItemCount

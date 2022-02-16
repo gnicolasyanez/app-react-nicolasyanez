@@ -1,13 +1,13 @@
 import React, { useState } from "react";
 import './ItemCount.css'
  
-function ItemCount({ contadorInicial, contadorStock, contadorMinimo, onAdd }) {
+function ItemCount({ contadorInicial, contadorStock, contadorMinimo, onAdd, stock }) {
   const [contador, mueveContador] = useState(contadorInicial);
 
   const sumaContador = () => {
     contador < contadorStock
-      ? mueveContador(contadorprevio => contadorprevio + 1)
-      : alert("stock maximo alcanzado");
+      ? mueveContador(contadorprevio => contadorprevio + 1) 
+      :  console.log('1 es el mínimo de compra');
   };
 
   const restaContador = () => {
@@ -26,7 +26,7 @@ function ItemCount({ contadorInicial, contadorStock, contadorMinimo, onAdd }) {
       <button onClick={reseteaContador} className="botonCard2"> Resetear </button>
       <button onClick={sumaContador} className="botonCard"> + </button>
       <br/>
-      <button onClick={()=> {onAdd(contador); reseteaContador()}} hidden={contador < 1 && "hidden"} className="btnAddCart">Agregar al Cart</button>
+      <button onClick={()=> {onAdd(contador); reseteaContador()}} hidden={contador < 1 && "hidden"} className="btnAddCart">Agregar al Carrito</button>
     </div>
   );
 }

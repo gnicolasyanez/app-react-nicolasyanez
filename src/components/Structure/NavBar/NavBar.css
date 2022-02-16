@@ -1,12 +1,13 @@
 .logo{
-    width:150px;
-    height:150px;
-    margin-left: 50px;
+    width:170px;
+    height:100px;
+    margin-left: -80px;
 }
 
 .cartLogo{
   font-size: 50px;
 }
+
 .navFont{
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
     color: blanchedalmond;

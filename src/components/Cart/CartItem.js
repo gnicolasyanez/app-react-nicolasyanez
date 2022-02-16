@@ -6,7 +6,7 @@ import CartItemCount from './CartItemCount';
 function CartItem({productos}) {
 const{removeItemCarrito, modificoStockCarrito}=useCartContext()
     
-const { id, imagen, titulo, desc, precio, qty, stock, minimo } =productos;
+const { id, imageUrl, name, descripcion, precio, qty, stock, minimo } =productos;
 
 const modifycarQtyCart =(contador) => {
         modificoStockCarrito({...productos, contador})
@@ -14,9 +14,9 @@ const modifycarQtyCart =(contador) => {
     return (       
         <div className="cartItemDetails">
                   <div className="cartCelda">
-                        <img className="cartItemImagen" src={imagen} alt={titulo} />
+                        <img className="cartItemImagen" src={imageUrl} alt={name} />
                   </div>
-                  <div className="cartCelda">{desc}</div>
+                  <div className="cartCelda">{descripcion}</div>
                   <div className="cartCelda">{precio}</div>
                   <CartItemCount
                     contadorQty={qty}
