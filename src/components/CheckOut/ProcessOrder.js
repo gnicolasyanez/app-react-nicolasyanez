@@ -23,7 +23,7 @@ function ProcessOrder() {
       ordenDeCompra.total = sumaCart
       ordenDeCompra.items = cartLista.map(itemCarrito => {
               const itemID = itemCarrito.id;
-              const itemName = itemCarrito.desc;
+              const itemName = itemCarrito.descripcion;
               const itemPrecio = itemCarrito.precio;
               const itemQty = itemCarrito.qty;
               const itemImageUrl = itemCarrito.imageUrl;

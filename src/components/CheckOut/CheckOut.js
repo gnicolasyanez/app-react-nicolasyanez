@@ -84,7 +84,7 @@ return <>
 
                             <Form.Group className="mb-3" controlId="formGridAddress1">
                                 <Form.Label>Dirección</Form.Label>
-                                <input className= "form-control prevent-validation" placeholder="Avenida Siempre Viva 742" name='direccion' onChange={handleChange} value={datosForm.direccion}/>
+                                <input className= "form-control prevent-validation" placeholder="Avenida Honguito 1463" name='direccion' onChange={handleChange} value={datosForm.direccion}/>
                            </Form.Group>
 
                             <Row className="mb-3">
@@ -114,7 +114,7 @@ return <>
                         <h4>Carrito <span className="price" ><FaShoppingCart/> <b>{cartResumeCant}</b></span></h4>
                                 {cartLista.map(productosCart => 
                                     <>
-                                    <div key={productosCart.id}>{productosCart.titulo} x {productosCart.qty}u<span className="price">{productosCart.qty*productosCart.precio}</span></div>
+                                    <div key={productosCart.id}>{productosCart.name} x {productosCart.qty}u<span className="price">{productosCart.qty*productosCart.precio}</span></div>
                                     <br/>
                                     </>)}
                         <br/>

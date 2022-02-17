@@ -1,9 +1,11 @@
 import React, { useState } from "react";
 import './ItemCount.css'
  
-function ItemCount({ contadorInicial, contadorStock, contadorMinimo, onAdd, stock }) {
+function ItemCount({ contadorInicial, contadorStock, contadorMinimo, onAdd}) {
   const [contador, mueveContador] = useState(contadorInicial);
-
+  
+console.log(contadorInicial)
+// console.log(contadorStock)
   const sumaContador = () => {
     contador < contadorStock
       ? mueveContador(contadorprevio => contadorprevio + 1) 

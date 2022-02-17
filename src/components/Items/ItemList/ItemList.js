@@ -4,12 +4,12 @@ import Item from "../Item/Item";
 import "./ItemList.css";
 
 const ItemList = memo ( ({ productos }) => {
-  console.log(productos)  
+  
   return(
           
           <div className="principalCards">
               <ul className="listaCards">
-              {productos.map((producto) => (<Item key={producto.id} producto={producto} />))}
+              {productos.map((productos) => (<Item key={productos.id} productos={productos} />))}
               </ul>
          </div>
     )
