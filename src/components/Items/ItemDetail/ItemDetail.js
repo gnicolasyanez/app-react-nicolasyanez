@@ -6,7 +6,7 @@ import { useCartContext } from "../../../context/cartContext";
 
 function ItemDetail({ prodIndividual }) {
   const { imageUrl, name, descripcion, precio, inicial, stock, minimo } = prodIndividual;
-  console.log(inicial)
+  
   const navigate = useNavigate();
   
   

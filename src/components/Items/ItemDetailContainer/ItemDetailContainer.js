@@ -10,7 +10,7 @@ import { app } from "../../../firebase/firebase";
 function ItemDetailContainer() {
     const [cargandoProdIndividual, setCargandoProdIndividual] = useState(true)
     const [prodIndividual, setProdIndividual] = useState({});
-    console.log(prodIndividual)
+    
   const {idProducto} = useParams()
   
 useEffect(() => {
